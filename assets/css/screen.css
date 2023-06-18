@@ -1,0 +1,78 @@
+/*PC*/
+@media screen and (min-width: 992px) {
+}
+
+/* máy tính bảng và điện thoại */
+@media screen and (max-width: 991px) {
+    .navbar {
+        width: 100%;
+        position: relative;
+        
+    }
+
+    .navbar-list {
+        display: none;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(50%, -50%)
+    }
+
+    .toggle-menu{
+        width: 24px;
+        color: #666;
+    }
+
+    .menu-overlay{
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 3;
+        opacity: 0;
+        visibility: hidden;
+        
+    }
+   
+    .menu-drawer{
+        position: fixed;
+        inset: 0 40% 0 0;
+        background: #fff;
+        z-index: 5;
+        transform: translateX(-100%);
+        transition: 0.5s ease;
+    }
+
+    .menu-check-box:checked ~ .menu-drawer{
+        transform: translateX(0);
+    }
+
+    .menu-check-box:checked ~ .menu-overlay{
+        opacity: 1;
+        visibility: inherit;
+    }
+
+    .menu-drawer .fa-solid{
+        font-size: 2rem;
+        padding: 20px 30px;
+        color: #666;
+        display: block;
+        text-align: end;
+    }
+
+    .drawer-close .fa-solid:checked  .menu-drawer{
+        transform: translateX(-100%);
+    }
+
+    
+}
+
+/* máy tính bảng */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+/* điện thoại */
+@media screen and (max-width: 767px) {
+}
