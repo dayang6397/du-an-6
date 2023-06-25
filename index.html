@@ -6,7 +6,7 @@
         <title>Dự án 6</title>
         <!-- ============= link css =============== -->
         <link rel="stylesheet" href="./assets/css/reset.css" />
-        <link rel="stylesheet" href="./assets/css/styles.css" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
         <link rel="stylesheet" href="./assets/css/screen.css" />
 
         <!-- =============== link font =============== -->
@@ -26,11 +26,7 @@
             <div class="container">
                 <nav class="navbar">
                     <!-- máy tính bảng, điện thoại -->
-                    <label for="menu-check-box" class="toggle-menu">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path fill="currentColor"  d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
-                    </label>
-                    
-
+                        <i class="fa-solid fa-bars " id="menu-fabars"></i>
 
                     <div class="logo">
                         <img
@@ -42,7 +38,7 @@
                     </div>
                     <ul class="navbar-list">
                         <li class="navbar-list__li">
-                            <a href="#!" class="navbar-list__link">Home</a>
+                            <a href="#!" class="navbar-list__link navbar-list__link--active">Home</a>
                         </li>
                         <li class="navbar-list__li">
                             <a href="#!" class="navbar-list__link">About</a>
@@ -64,27 +60,58 @@
 
                     <!-- action -->
                     <a href="#!" class="nav-btn btn">Sign up</a>
+                    <!-- sign up form -->
+                    <div class="navbar-form">
+                        <div class="navbar-icon"><div class="fa-solid fa-xmark"></div></div>
+                        <formn
+                        method="POST" 
+                        action="https://api-gateway.fullstack.edu.vn/action_page.php" 
+                        id="sign-up__form">
+                        
+                            <div class="form-group">
+                                <label for="sign-up__name" class="label-signup">Tài Khoản:</label>
+                            <input 
+                            type="text" 
+                            class="sign-up__name"
+                            name="sign-up__name"
+                            id="sign-up__name"
+                            placeholder="nhập ở đây...">
+                            </div>
+                            <div class="form-group">
+                                <label for="sign-up__password" class="label-signup":>Mật khẩu:</label>
+                            <input 
+                            type="password"  
+                            class="sign-up__name"
+                            name="sign-up__password"
+                            id="sign-up__password"
+                            placeholder="mật khẩu...">
+                            </div>
+                            <button type="submit" class="navbar-button">Sign Up</button>
+                            
+                        </formn>
+                    </div>
+                    <div class="nav-layer"></div>
                 </nav>
             </div>
         </header>
 
         <!-- ============== máy tính bảng và điện thoại header ============= -->
-        <div class="mobile-header">
+        <!-- <div class="mobile-header">
             <input  
             type="checkbox" 
             name="menu-check-box" 
             id="menu-check-box" 
             class="menu-check-box"
-            hidden>
+            hidden> -->
             <!-- overlay -->
-              <label for="menu-check-box" class="menu-overlay"></label>
+              <!-- <label for="menu-check-box" class="menu-overlay"></label> -->
               <!-- menu-content -->
-              <div class="menu-drawer">
+              <!-- <div class="menu-drawer">
                 <label for="menu-check-box">
                     <i class="fa-solid fa-xmark"></i>
                 </label>
               </div>
-        </div>
+        </div> -->
         <!-- ============== hero ============== -->
         <section>
             <div class="hero">
@@ -153,6 +180,6 @@
             </div>
         </section>
 
-        <script src="./scrip.js"></script>
+        <script src="./script.js"></script>
     </body>
 </html>
